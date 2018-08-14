@@ -15,6 +15,7 @@ node {
         docker.withRegistry("https://registry.hub.docker.com", "docker") {
         image.push()
     }
+    }
     stage('publish Result') {
         
         step([$class: 'JUnitResultArchiver', testResults: 'target/surefire-reports/*.xml'])
