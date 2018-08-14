@@ -10,7 +10,7 @@ node {
     }
     stage('package') {
         
-        sh "'${mvnHome}/bin/mvn' test"
+        sh "'${mvnHome}/bin/mvn' package"
     }
     stage('publish Result') {
         
